@@ -16,10 +16,12 @@ public class Main {
 		//System.out.println("Point: (" + p.x + ", " + p.y + ")");
 		
 		//2. Добра практика
+
 		p.setX(120);
 		p.setY(230);
 		
 		System.out.println("Point (" + p.getX()+ ", " + p.getY() + ") is visible:" + p.isVisible());
+
 	}
 
 }
