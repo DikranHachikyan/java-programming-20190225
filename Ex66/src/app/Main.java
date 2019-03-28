@@ -3,7 +3,7 @@ package app;
 public class Main {
 		
 	public static void main(String[] args){
-		Integer [] numbers = {1, 12, 3, 41, 5, 6, 7, 8, 9, 10};
+		Integer [] numbers = {1, 12, 8, 41, 8, 6, 7, 8, 9, 10};
 		String  [] names = {"Anna","Markus","John","Maria"};
 		
 		ArrayUtils<String> su = new ArrayUtils<>();
@@ -13,6 +13,7 @@ public class Main {
 		System.out.println("index of John:" + arrayActions(names, "John", su::<String>find));
 		System.out.println("index of 41:" + arrayActions(numbers, 41, iu::<Integer>find));
 		
+		System.out.println("elements eql to 8:" + arrayActions(numbers, 8, ArrayUtils::<Integer>countEquals));
 	}
 	
 	public static <T> int arrayActions(  T [] values, T element, IArrayUtils<T> utils) {
@@ -25,6 +26,15 @@ interface IArrayUtils<T> {
 }
 
 class ArrayUtils<T> {
+	
+	public static <E> int countEquals( E [] values , E value) {
+		int count = 0;
+		for( E v : values) {
+			if( v.equals(value) ) count++;
+		}
+		return count;
+	}
+	
 	public int find( T [] values , T value) {
 		for( int i = 0 ; i < values.length ; i++ ) {
 			if( values[i] == value) return i;
