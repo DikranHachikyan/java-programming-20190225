@@ -8,7 +8,7 @@ import containers.ArrayQueue;
 public class Main {
 		
 	public static void main(String[] args){
-		ArrayQueue<String> que = new ArrayQueue<>(5);
+		ArrayQueue<String> que = new ArrayQueue<>( 5);
 		
 		que.add("1");
 		que.add("2");
