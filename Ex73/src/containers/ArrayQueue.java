@@ -1,19 +1,25 @@
 package containers;
 
+import java.lang.reflect.Array;
 import java.util.AbstractQueue;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class ArrayQueue<E> extends AbstractQueue<E> {
-	private Object [] elements;
+	private E [] elements;
 	private int head = 0;
 	private int tail = 0;
 	private int count = 0;
 	private int modCount = 0; /* брояч на промените в данните */
-	public ArrayQueue( int capacity ) {
+	public ArrayQueue(Class<E> c,   int capacity ) {
 		super();
-		elements = new Object[capacity];
+		//1.
+		//elements = new Object[capacity];
+		// това е грешка
+		//elements = new E[capacity];
+		//2.
+		elements = (E[])Array.newInstance(c, capacity);
 	}
 	
 	@Override
