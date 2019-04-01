@@ -8,6 +8,7 @@ public class Main {
 	public static void main(String[] args){
 		int size = 0;
 		try(FileInputStream fin = new FileInputStream("./readme.txt")) {
+
 			size = fin.available();
 			System.out.println("size:" +size + " bytes");
 			
