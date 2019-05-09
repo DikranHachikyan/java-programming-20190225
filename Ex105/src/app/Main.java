@@ -17,9 +17,6 @@ public class Main {
 		ExecutorService service = Executors.newFixedThreadPool(2);
 		List< Callable<Integer> > tasks = new ArrayList<>();
 		
-		for( int i = 0 ; i < 10 ; i++){
-			tasks.add( new )
-		}
 		//---------------- task 1 ------------------------
 		tasks.add( ()->{
 			int fact = 1;
@@ -83,6 +80,3 @@ public class Main {
 	}	
 }
 
-class SerachText implements Callable<V>{
-
-}
